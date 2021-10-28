@@ -1,0 +1,1 @@
+** Simple JS template for Phaser 3

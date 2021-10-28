@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Phaser Simple Template</title>
+	<script src="//cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.js"></script>
+	<style>
+		html, body { margin: 0; padding: 0; }
+	</style>
+</head>
+<body>
+
+	<script>
+		let gameScene = new Phaser.Scene('Game');
+		gameScene.create = function () {
+			console.log(this.sys.settings.key, '(scene created)');
+			this.add.rectangle(320, 180, 640, 360, 0xff0000);
+			this.add.circle(320, 180, 80).setStrokeStyle(2, 0x0033aa);
+		};
+		let config = {
+			type: Phaser.AUTO,
+			width: 640,
+			height: 360,
+			scene: gameScene
+		};
+		let game = new Phaser.Game(config);
+	</script>
+
+</body>
+</html>
